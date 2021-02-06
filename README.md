@@ -16,7 +16,8 @@
 
 ## 最简单实现排行榜
  1. 在`Play.vue`中`endGame`函数处加入上传分数相关代码
- 2. 在`Rank.vue`中拉去排名
+ 2. 在`Rank.vue`中拉取排名
+ 3. 后端实现在 [backend](./backend) 文件夹中
 
 ## 注意事项
  - 由于使用`assetLoader`在webpack loader中加入了图片预加载功能，导入的图片将在`vue-router`的`beforeResolve` Hook中被预加载，图片的原始宽高也是从预加载数据获取。因此，若需修改为使用未经webpack打包的图片地址，请自行处理预加载问题，如在`beforeResolve`之前使用`assetLoader.push(url)`将图片加入预加载列表
