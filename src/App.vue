@@ -1,30 +1,45 @@
+<script>
+export default {}
+</script>
+
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+    <router-view />
+    <div class="copyright">
+        &copy;2021 BYR Team - xyToki
+    </div>
 </template>
-
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.copyright {
+    position: fixed;
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+    font-family: Consolas, monospace;
+}
+body {
+    background: #fff;
+    max-width: 450px;
+    max-height: 800px;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 </style>

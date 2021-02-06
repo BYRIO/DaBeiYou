@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
+<html lang="zh_Hans">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+        <title>大游戏：合成小北邮</title>
+        <style>
+        #vueload{position:fixed;z-index:999;font-family:Microsoft Yahei;z-index:97;left:0;right:0;top:0;bottom:0;background:#fff;transition:all .2s}
+        #vueloader img{width:128px;display:block;margin:0 auto;animation:lr 1.1s ease-in-out infinite}
+        #vueloader .btxt{font-size:12px}
+        #vueloader{text-align:center;margin-top:35vh}
+        .bp{visibility:hidden;display:block;width:110px;background:#c0e3f7;border:1px solid #58b4e3;box-sizing:border-box;height:14px;top:-10px;margin:0 auto;position:relative;border-radius:15px;overflow:hidden}
+        @keyframes lr{0%{transform:rotate(0)}50%{transform:rotate(10deg)}100%{transform:rotate(0)}}
+        .bin{height:100%;width:1%;background:#1b96d5;border-radius:15px;transition:all .1s}
+        #vueload.hide{opacity:0;pointer-events:none}
+        </style>
+    </head>
+    <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+        <strong></strong>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="vueload">
+        <div id="vueloader">
+            <img src="<%= BASE_URL %>static/img/load.png" alt="">
+            <div class="bp" id="tokibs">
+                <div class="bin" id="tokibw"></div>
+            </div>
+            <div class="btxt" id="tokibt">加载中 精彩在路上</div>
+        </div>
+    </div>
+    <main id="toki"></main>
+    <!-- uncomment the next line if you need wechat api -->
+    <!--script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script-->
   </body>
 </html>
